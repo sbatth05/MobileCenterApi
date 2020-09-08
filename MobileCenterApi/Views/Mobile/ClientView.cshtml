@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MobileCenterApi.Models.TableMobile>
+
+@{
+    ViewBag.Title = "ClientView";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-md-4">
+            <img src="https://static.toiimg.com/photo/57503229/Apple-iPhone-6-32GB.jpg" class="img-thumbnail" />
+            <h1>   <b>Company</b>     @Html.DisplayFor(modelItem => item.CompanyName) </h1>
+            <h2>   <b>Model-</b>     @Html.DisplayFor(modelItem => item.ProductModel) </h2>
+            <h3> <b>Features </b>@Html.DisplayFor(modelItem => item.Features)</h3>
+            <h4 class="btn btn-primary">@Html.DisplayFor(modelItem => item.Price) </h4>
+        </div>
+
+
+        }
+
+    </div>
+
+</div>

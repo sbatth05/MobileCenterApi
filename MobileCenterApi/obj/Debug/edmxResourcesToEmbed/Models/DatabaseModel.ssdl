@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MobileCenterApiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TableComplaint">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Issue" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TableContact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Mssg" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TableEmployee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Contact" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="Dsignation" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TableMobile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="ProductModel" Type="varchar" MaxLength="50" />
+    <Property Name="Features" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="varchar" MaxLength="50" />
+    <Property Name="Qty" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="MobileCenterApiModelStoreContainer">
+    <EntitySet Name="TableComplaint" EntityType="Self.TableComplaint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TableContact" EntityType="Self.TableContact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TableEmployee" EntityType="Self.TableEmployee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TableMobile" EntityType="Self.TableMobile" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

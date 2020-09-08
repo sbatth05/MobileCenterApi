@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MobileCenterApiModelStoreContainer" CdmEntityContainer="MobileCenterApiEntities">
+    <EntitySetMapping Name="TableComplaints">
+      <EntityTypeMapping TypeName="MobileCenterApiModel.TableComplaint">
+        <MappingFragment StoreEntitySet="TableComplaint">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Issue" ColumnName="Issue" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TableContacts">
+      <EntityTypeMapping TypeName="MobileCenterApiModel.TableContact">
+        <MappingFragment StoreEntitySet="TableContact">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mssg" ColumnName="Mssg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TableEmployees">
+      <EntityTypeMapping TypeName="MobileCenterApiModel.TableEmployee">
+        <MappingFragment StoreEntitySet="TableEmployee">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Dsignation" ColumnName="Dsignation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TableMobiles">
+      <EntityTypeMapping TypeName="MobileCenterApiModel.TableMobile">
+        <MappingFragment StoreEntitySet="TableMobile">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ProductModel" ColumnName="ProductModel" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

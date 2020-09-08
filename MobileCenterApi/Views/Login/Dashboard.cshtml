@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1 align="center">wel come to the dashboard</h1>
+            <a class="btn btn-success" href="@Url.Action("ComplaintList","Complaint")">View Complaint </a>
+            <br /><br />
+            <a class="btn btn-success" href="@Url.Action("ProductList","Mobile")">View Mobile </a>
+
+            <br /><br />
+            <a class="btn btn-success" href="@Url.Action("EmployeeList","Employee")">View Employee </a>
+
+
+            <br /><br />
+            <a class="btn btn-success" href="@Url.Action("ContactReccord","Home")">View Messages </a>
+
+
+
+            <a class="btn btn-warning" href="@Url.Action("Index","Home")">Logout </a>
+        </div>
+
+    </div>
+
+</div>
+

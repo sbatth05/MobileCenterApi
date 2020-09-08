@@ -1,0 +1,72 @@
+﻿@model IEnumerable<MobileCenterApi.Models.TableMobile>
+
+@{
+    ViewBag.Title = "ProductList";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2>Mobile  List</h2>
+
+            <p>
+                @Html.ActionLink("Add New Mobile", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CompanyName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProductModel)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Features)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Qty)
+                    </th>
+                    <th>Edit Details </th>
+                    <th>Delete </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CompanyName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductModel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Features)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Qty)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    </td><td>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+
+
+        </div>
+    </div>
+
+</div>
+<a href="@Url.Action("Dashboard","Login")">Back to Dashboard</a>

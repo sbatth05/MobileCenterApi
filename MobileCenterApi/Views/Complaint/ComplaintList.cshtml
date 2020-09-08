@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MobileCenterApi.Models.TableComplaint>
+
+@{
+    ViewBag.Title = "ComplaintList";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Complaint List</h2>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Issue)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th>Edit </th>
+                    <th>Delete</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Issue)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        </td>
+                        <td>
+
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<a href="@Url.Action("Dashboard","Login")">Back to Dashboard</a>
